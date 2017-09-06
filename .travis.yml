@@ -6,7 +6,7 @@ services:
 script:
   - sudo docker run -it -v "$PWD:/repository" debian:testing sh -c "
       apt-get update &&
-      apt-get install --yes g\+\+ libssl-dev &&
+      apt-get install --yes g\+\+ libssl-dev cmake &&
       cd /repository && mkdir build && cd build &&
       cmake -DCMAKE_CXX_FLAGS=-Werror .. &&
       make &&
