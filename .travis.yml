@@ -4,7 +4,7 @@ services:
   - docker
 
 script:
-  - sudo docker run -it -v "$PWD:/repository" eidham:testing sh -c "
+  - sudo docker run -it -v "$PWD:/repository" eidheim/testing sh -c "
       cd /repository && mkdir build && cd build &&
       cmake -DCMAKE_CXX_FLAGS=-Werror .. &&
       make &&

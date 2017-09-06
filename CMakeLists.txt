@@ -14,5 +14,9 @@ include_directories(${OPENSSL_INCLUDE_DIR})
 add_executable(examples examples.cpp)
 target_link_libraries(examples ${OPENSSL_CRYPTO_LIBRARY})
 
+add_executable(crack crack.cpp)
+target_link_libraries(crack ${OPENSSL_CRYPTO_LIBRARY})
+
+
 enable_testing()
 add_subdirectory(tests)
