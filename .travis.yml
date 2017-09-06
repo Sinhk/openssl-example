@@ -4,9 +4,7 @@ services:
   - docker
 
 script:
-  - sudo docker run -it -v "$PWD:/repository" debian:testing sh -c "
-      apt-get update &&
-      apt-get install --yes g\+\+ libssl-dev cmake &&
+  - sudo docker run -it -v "$PWD:/repository" eidham:testing sh -c "
       cd /repository && mkdir build && cd build &&
       cmake -DCMAKE_CXX_FLAGS=-Werror .. &&
       make &&
